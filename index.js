@@ -1,7 +1,9 @@
-const setDevice = require('./setDevice')
+const setDefaultDevice = require('./setDefaultDevice')
+const setDefaultComDevice = require('./setDefaultComDevice')
 const getDevices = require('./getDevices')
 
 module.exports = {
-  setDevice: setDevice,
+  setDefaultDevice: setDefaultDevice,
+  setDefaultComDevice: setDefaultComDevice,
   getDevices: getDevices
 }

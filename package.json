@@ -1,22 +1,49 @@
 {
-  "name": "audio-devices",
-  "version": "0.0.7",
+  "_from": "audio-devices",
+  "_id": "audio-devices@0.0.7",
+  "_inBundle": false,
+  "_integrity": "sha512-X6Uo+AMw0lKSMqrdFNTz7JSZM1KfNtLdfobTfXLloqQIHMBp5cHg9c49fRF17LS5bb2ApR9a5ANOYIO2tTmJSQ==",
+  "_location": "/audio-devices",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "audio-devices",
+    "name": "audio-devices",
+    "escapedName": "audio-devices",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/audio-devices/-/audio-devices-0.0.7.tgz",
+  "_shasum": "fbf0664c007a089290bdbddd18adbc590a1df4df",
+  "_spec": "audio-devices",
+  "_where": "G:\\Electron\\goxlr-settings-app",
+  "author": {
+    "name": "Ashley Fletcher",
+    "email": "ashleymarkfletcher@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ashleymarkfletcher/audio-devices/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "codecov": "^3.0.0",
+    "nircmd": "^2.0.0"
+  },
+  "deprecated": false,
   "description": "set/get audio devices on Windows",
-  "main": "index.js",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
   "engines": {
     "node": ">=6"
   },
-  "os": [
-    "win32"
-  ],
-  "scripts": {
-    "test": "jest && codecov",
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ashleymarkfletcher/audio-devices.git"
-  },
+  "homepage": "https://github.com/ashleymarkfletcher/audio-devices#readme",
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
@@ -34,17 +61,19 @@
     "windows",
     "sound"
   ],
-  "author": "Ashley Fletcher <ashleymarkfletcher@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ashleymarkfletcher/audio-devices/issues"
+  "main": "index.js",
+  "name": "audio-devices",
+  "os": [
+    "win32"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashleymarkfletcher/audio-devices.git"
   },
-  "homepage": "https://github.com/ashleymarkfletcher/audio-devices#readme",
-  "dependencies": {
-    "codecov": "^3.0.0",
-    "nircmd": "^2.0.0"
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest && codecov"
   },
-  "devDependencies": {
-    "jest": "^21.2.1"
-  }
+  "version": "0.0.7"
 }
