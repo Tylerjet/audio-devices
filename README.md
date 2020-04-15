@@ -2,8 +2,6 @@
 
 get and set the current audio device on windows.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/2cwals6wgr9fg1gx?svg=true)](https://ci.appveyor.com/project/ashleymarkfletcher/audio-devices)
-[![codecov](https://codecov.io/gh/ashleymarkfletcher/audio-devices/branch/master/graph/badge.svg)](https://codecov.io/gh/ashleymarkfletcher/audio-devices)
 
 ### Installing
 
@@ -30,10 +28,6 @@ audioDevices.setDevice('Speakers')
 })
 
 ```  
-
-## ToDo
-  * Add CLI
-  * Find alternative to nircmd for getting audio devices
 
 ## Known issues
   * Getting the list of audio devices opens a popup and isn't readable
