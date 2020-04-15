@@ -2,24 +2,13 @@
 
 get and set the current audio device on windows.
 
-
-### Installing
-
-```bash
-$ npm install audio-devices --save
-```
-## Features
-
-  * Set the current audio device
-  * Get a list of all audio devices(WIP!)
-
 ## Example Usage
 Set the current device to "Speakers"
 
 ```js
 const audioDevices = require('audio-devices');
 
-audioDevices.setDevice('Speakers')
+audioDevices.setDefaultDevice('Speakers')
 .then(() => {
   console.log('done!')
 })
