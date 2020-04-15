@@ -3,7 +3,7 @@ const setDefaultComDevice = require('./actions/setDefaultComDevice')
 const getDevices = require('./actions/getDevices')
 const setVolume = require('./actions/setVolume')
 const setMute = require('./actions/setMute')
-const setMute = require('./actions/setUnMute')
+const setUnMute = require('./actions/setUnMute')
 
 module.exports = {
   setDefaultDevice: setDefaultDevice,
