@@ -75,5 +75,5 @@
     "start": "node index.js",
     "test": "jest && codecov"
   },
-  "version": "0.0.7"
+  "version": "0.0.8"
 }
