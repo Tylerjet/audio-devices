@@ -33,7 +33,7 @@
   "bundleDependencies": false,
   "dependencies": {
     "codecov": "^3.0.0",
-    "nircmd": "^2.0.0"
+    "soundvolumeview-node": "Tylerjet/soundvolumeview-node#master"
   },
   "deprecated": false,
   "description": "set/get audio devices on Windows",
