@@ -1,6 +1,6 @@
 {
   "name": "audio-devices",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "set/get audio devices on Windows",
   "main": "index.js",
   "dependencies": {
