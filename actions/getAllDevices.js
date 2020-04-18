@@ -1,5 +1,6 @@
 /*
 Gets list of All audio devices and returns an array of the devices
+Called at beginning of file and can then be used throughout file
 */
 const portAudio = require('naudiodon')
 
