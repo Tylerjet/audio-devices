@@ -1,78 +1,20 @@
 {
-  "_from": "audio-devices",
-  "_id": "audio-devices@0.0.7",
-  "_inBundle": false,
-  "_integrity": "sha512-X6Uo+AMw0lKSMqrdFNTz7JSZM1KfNtLdfobTfXLloqQIHMBp5cHg9c49fRF17LS5bb2ApR9a5ANOYIO2tTmJSQ==",
-  "_location": "/audio-devices",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "audio-devices",
-    "name": "audio-devices",
-    "escapedName": "audio-devices",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/audio-devices/-/audio-devices-0.0.7.tgz",
-  "_shasum": "fbf0664c007a089290bdbddd18adbc590a1df4df",
-  "_spec": "audio-devices",
-  "_where": "G:\\Electron\\goxlr-settings-app",
-  "author": {
-    "name": "Ashley Fletcher",
-    "email": "ashleymarkfletcher@gmail.com"
-  },
-  "bugs": {
-    "url": "https://github.com/ashleymarkfletcher/audio-devices/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "soundvolumeview-node": "Tylerjet/soundvolumeview-node#master"
-  },
-  "deprecated": false,
-  "description": "set/get audio devices on Windows",
-  "devDependencies": {
-    "jest": "^21.2.1"
-  },
-  "engines": {
-    "node": ">=6"
-  },
-  "homepage": "https://github.com/ashleymarkfletcher/audio-devices#readme",
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "**/*.{js}",
-      "!**/node_modules/**",
-      "!**/coverage/**",
-      "!**/vendor/**",
-      "!index.js",
-      "!example.js"
-    ]
-  },
-  "keywords": [
-    "audio",
-    "device",
-    "windows",
-    "sound"
-  ],
-  "license": "ISC",
-  "main": "index.js",
   "name": "audio-devices",
-  "os": [
-    "win32"
-  ],
+  "version": "0.0.9",
+  "description": "set/get audio devices on Windows",
+  "main": "index.js",
+  "dependencies": {
+    "naudiodon": "^2.1.2",
+    "soundvolumeview-node": "github:Tylerjet/soundvolumeview-node#master"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashleymarkfletcher/audio-devices.git"
+    "url": "git+https://github.com/Tylerjet/audio-devices.git"
   },
-  "scripts": {
-    "start": "node index.js",
-    "test": "jest && codecov"
+  "author": "Ashley Fletcher Modifed by: MrTylerjet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tylerjet/audio-devices/issues"
   },
-  "version": "0.0.9"
+  "homepage": "https://github.com/Tylerjet/audio-devices#readme"
 }
