@@ -52,5 +52,5 @@ function mmeRemove(){
 }
 
 module.exports = (manufacturer) => {
-	getDeviceNames(manufacturer);
+	return getDeviceNames(manufacturer);
 }
