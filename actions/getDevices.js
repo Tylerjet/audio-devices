@@ -2,7 +2,7 @@
 Gets list of audio devices based on device manufacturer name EX.) TC-Helion, and returns an array of the devices
 which can then be used to extract the manufacturer separately using arr.split()
 */
-const portAudio = const portAudio = require('naudiodon')
+const portAudio = require('naudiodon')
 
 var devicesList = portAudio.getDevices(),
 firstmme = true,
