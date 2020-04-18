@@ -1,4 +1,4 @@
-const soundvolumeview = require('soundvolumeview-node'),
+const soundvolumeview = require('soundvolumeview-node')
 
 module.exports = (manufacturer, audioDevice, direction) => {
 // manufacturer (Name in parenthesis of getdevices), audioDevice (device name before parenthesis of get devices)
