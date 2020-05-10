@@ -13,6 +13,7 @@ MMES,
 WDMKSS,
 DevicesArr = [];
 
+//Remove MME and WDMKS Devices as they seem to have issues returning the full name string at times so they are not usefull
 mmeRemove();
 wdmksRemove();
 
