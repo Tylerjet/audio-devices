@@ -16,7 +16,4 @@ audioDevices.setDefaultDevice('Speakers')
   console.log('error', error)
 })
 
-```  
-
-## Known issues
-  * Getting the list of audio devices opens a popup and isn't readable
+```
