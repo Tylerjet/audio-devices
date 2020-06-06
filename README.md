@@ -1,6 +1,6 @@
 # audio-devices
 
-get and set the current audio device on windows.
+get and set the current audio device on windows, as well change volume and set mute/unmute state.
 
 ## Example Usage
 Set the current device to "Speakers"
