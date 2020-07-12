@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "naudiodon": "^2.2.1",
-    "soundvolumeview-node": "github:Tylerjet/soundvolumeview-node#pkg-test"
+    "soundvolumeview-node": "github:Tylerjet/soundvolumeview-node"
   },
   "repository": {
     "type": "git",
