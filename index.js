@@ -13,5 +13,5 @@ module.exports = {
   setMute: setMute,
   setUnMute: setUnMute,
   getDevices: getDevices,
-  getAllDevices: getAllDevices,
+  getAllDevices: getAllDevices,``
 };
