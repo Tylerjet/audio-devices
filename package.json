@@ -3,6 +3,9 @@
   "version": "0.0.17",
   "description": "set/get audio devices on Windows",
   "main": "index.js",
+  "scripts": {
+    "postinstall": "patch-package"
+  },
   "dependencies": {
     "naudiodon": "^2.2.4",
     "soundvolumeview-node": "github:Tylerjet/soundvolumeview-node"
@@ -16,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Tylerjet/audio-devices/issues"
   },
-  "homepage": "https://github.com/Tylerjet/audio-devices#readme"
+  "homepage": "https://github.com/Tylerjet/audio-devices#readme",
+  "devDependencies": {
+    "patch-package": "^6.2.2"
+  }
 }
