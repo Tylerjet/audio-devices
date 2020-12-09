@@ -4,7 +4,7 @@
   "description": "set/get audio devices on Windows",
   "main": "index.js",
   "dependencies": {
-    "naudiodon": "github:Tylerjet/naudiodon",
+    "naudiodon": "github:Streampunk/naudiodon",
     "soundvolumeview-node": "github:Tylerjet/soundvolumeview-node"
   },
   "repository": {
