@@ -5,6 +5,7 @@ const setVolume = require('./actions/setVolume');
 const setMute = require('./actions/setMute');
 const setUnMute = require('./actions/setUnMute');
 const getAllDevices = require('./actions/getAllDevices');
+const setFocusedDevice = require('./actions/setFocusedDevice')
 
 module.exports = {
   setDefaultDevice: setDefaultDevice,
@@ -14,4 +15,5 @@ module.exports = {
   setUnMute: setUnMute,
   getDevices: getDevices,
   getAllDevices: getAllDevices,
+  setFocusedDevice: setFocusedDevice,
 };
