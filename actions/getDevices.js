@@ -20,8 +20,10 @@ wdmksRemove();
 function getDeviceNames(manufacturer) {
 	for (var device in devicesList) {
 		if (devicesList[device].name.includes(manufacturer)){
-			const deviceData = { name: devicesList[device].name, type: devicesList[device].maxInputChannels === 0 ? 'Render' : 'Capture' }
-		  DevicesArr.push(deviceData)
+      const manufacturer = devicesList[device].name.split(/[\(\)]/g)[1]
+      const name = devicesList[device].name.split(/[\(\)]/g)[0].trim()
+      const deviceData = { name: name, type: devicesList[device].maxInputChannels === 0 ? 'Render' : 'Capture', manufacturer: manufacturer}
+      DevicesArr.push(deviceData)
 		}
 	}
 	return DevicesArr
