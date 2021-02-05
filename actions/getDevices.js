@@ -5,19 +5,19 @@ Called at beginning of file and can then be used throughout file
 */
 const portAudio = require('naudiodon')
 
-var devicesList = portAudio.getDevices(),
+let devicesList = portAudio.getDevices(),
 firstmme = true,
 firstwdmks = true,
 MMEE = 0,
 WDMKSE = 0,
 MMES,
-WDMKSS,
-DevicesArr = [];
+WDMKSS;
 
 mmeRemove();
 wdmksRemove();
 
 function getDeviceNames(manufacturer) {
+  const DevicesArr = [];
 	for (var device in devicesList) {
 		if (devicesList[device].name.includes(manufacturer)){
       const manufacturer = devicesList[device].name.split(/[\(\)]/g)[1]
@@ -27,6 +27,19 @@ function getDeviceNames(manufacturer) {
 		}
 	}
 	return DevicesArr
+}
+
+function reloadDevices(manufacturer) {
+  devicesList = portAudio.getDevices();
+  firstmme = true,
+  firstwdmks = true,
+  MMEE = 0,
+  WDMKSE = 0,
+  MMES,
+  WDMKSS;
+  mmeRemove();
+  wdmksRemove();
+  return getDeviceNames(manufacturer);
 }
 
 function wdmksRemove(){
@@ -56,5 +69,5 @@ function mmeRemove(){
 }
 
 module.exports = (manufacturer) => {
-	return getDeviceNames(manufacturer);
+  return reloadDevices(manufacturer);
 }

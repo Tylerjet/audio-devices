@@ -26,8 +26,20 @@ function getDeviceNames() {
 	}
 	return DevicesArr
 }
+function reloadDevices() {
+  devicesList = portAudio.getDevices();
+  firstmme = true,
+  firstwdmks = true,
+  MMEE = 0,
+  WDMKSE = 0,
+  MMES,
+  WDMKSS;
+  mmeRemove();
+  wdmksRemove();
+  return getDeviceNames();
+}
 
-function wdmksRemove(){
+function wdmksRemove() {
 	for (var WDMKS in devicesList){
 		if (devicesList[WDMKS].hostAPIName == "Windows WDM-KS" && firstwdmks == true){
 			WDMKSS = WDMKS
@@ -40,7 +52,7 @@ function wdmksRemove(){
 	devicesList.splice(WDMKSS,WDMKSE)
 }
 
-function mmeRemove(){
+function mmeRemove() {
 	for (var MME in devicesList){
 		if (devicesList[MME].hostAPIName == "MME" && firstmme == true){
 			MMES = MME
@@ -54,5 +66,5 @@ function mmeRemove(){
 }
 
 module.exports = () => {
-	return getDeviceNames();
+  return reloadDevices();
 }
