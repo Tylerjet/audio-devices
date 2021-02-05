@@ -4,25 +4,25 @@ Called at beginning of file and can then be used throughout file
 */
 const portAudio = require('naudiodon')
 
-var devicesList = portAudio.getDevices(),
+let devicesList = portAudio.getDevices(),
 firstmme = true,
 firstwdmks = true,
 MMEE = 0,
 WDMKSE = 0,
 MMES,
-WDMKSS,
-DevicesArr = [];
+WDMKSS;
 
 //Remove MME and WDMKS Devices as they seem to have issues returning the full name string at times so they are not useful
 mmeRemove();
 wdmksRemove();
 
 function getDeviceNames() {
+  const DevicesArr = [];
 	for (var device in devicesList) {
     const manufacturer = devicesList[device].name.split(/[\(\)]/g)[1]
     const name = devicesList[device].name.split(/[\(\)]/g)[0].trim()
     const deviceData = { name: name, type: devicesList[device].maxInputChannels === 0 ? 'Render' : 'Capture', manufacturer: manufacturer}
-		DevicesArr.push(deviceData)
+    DevicesArr.push(deviceData)
 	}
 	return DevicesArr
 }
