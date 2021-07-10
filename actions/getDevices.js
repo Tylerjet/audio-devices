@@ -5,21 +5,12 @@ Called at beginning of file and can then be used throughout file
 */
 const portAudio = require('naudiodon')
 
-let devicesList = portAudio.getDevices(),
-firstmme = true,
-firstwdmks = true,
-MMEE = 0,
-WDMKSE = 0,
-MMES,
-WDMKSS;
-
-mmeRemove();
-wdmksRemove();
+let devicesList = portAudio.getDevices();
 
 function getDeviceNames(manufacturer) {
   const DevicesArr = [];
-	for (var device in devicesList) {
-		if (devicesList[device].name.includes(manufacturer)){
+	for (device in devicesList) {
+		if ((devicesList[device].name.toLowerCase()).includes(manufacturer)){
       const manufacturer = devicesList[device].name.split(/[\(\)]/g)[1]
       const name = devicesList[device].name.split(/[\(\)]/g)[0].trim()
       const deviceData = { name: name, type: devicesList[device].maxInputChannels === 0 ? 'Render' : 'Capture', manufacturer: manufacturer}
@@ -29,21 +20,17 @@ function getDeviceNames(manufacturer) {
 	return DevicesArr
 }
 
-function reloadDevices(manufacturer) {
-  devicesList = portAudio.getDevices();
-  firstmme = true,
-  firstwdmks = true,
-  MMEE = 0,
-  WDMKSE = 0,
-  MMES,
-  WDMKSS;
+function getDevices(manufacturer) {
   mmeRemove();
   wdmksRemove();
   return getDeviceNames(manufacturer);
 }
 
-function wdmksRemove(){
-	for (var WDMKS in devicesList){
+function wdmksRemove() {
+  let firstwdmks = true, /* Default to false until the first WDMKS device is found in the array */
+  WDMKSE = 0, /* Number of WDMKS devices found which will be spliced out at the end */
+  WDMKSS; /* Starting Point of the first found WDMKS Device used to set the start point when deleting the array */
+	for (WDMKS in devicesList){
 		if (devicesList[WDMKS].hostAPIName == "Windows WDM-KS" && firstwdmks == true){
 			WDMKSS = WDMKS
 			firstwdmks = false
@@ -55,13 +42,16 @@ function wdmksRemove(){
 	devicesList.splice(WDMKSS,WDMKSE)
 }
 
-function mmeRemove(){
-	for (var MME in devicesList){
-		if (devicesList[MME].hostAPIName == "MME" && firstmme == true){
+function mmeRemove() {
+  let firstmme = false, /* Default to false until the first MME device is found in the array */
+  MMEE = 0, /* Number of MME devices found which will be spliced out at the end */
+  MMES; /* Starting Point of the first found MME Device used to set the start point when deleting the array */
+	for (MME in devicesList){
+		if (devicesList[MME].hostAPIName == "MME" && firstmme == false){
 			MMES = MME
-			firstmme = false
+			firstmme = true
 		}
-		if (devicesList[MME].hostAPIName == "MME" && firstmme == false) {
+		if (devicesList[MME].hostAPIName == "MME" && firstmme == true) {
 			MMEE = MMEE + 1
 		}
 	}
@@ -69,5 +59,5 @@ function mmeRemove(){
 }
 
 module.exports = (manufacturer) => {
-  return reloadDevices(manufacturer);
+  return getDevices(manufacturer.toLowerCase());
 }
